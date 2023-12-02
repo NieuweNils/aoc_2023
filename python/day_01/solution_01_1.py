@@ -9,7 +9,7 @@ DAY = 1
 
 def main():
     load_dotenv()
-    session_cookie = os.getenv("session_cookie")
+    session_cookie = os.getenv("SESSION_COOKIE")
     auth_header = {"Cookie": f"session={session_cookie}"}
     url = f"https://adventofcode.com/2023/day/{DAY}/input"
 

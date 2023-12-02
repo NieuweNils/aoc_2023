@@ -24,9 +24,9 @@ async fn main() {
         .await
         .unwrap()
         ;
-    let lines = data.split_whitespace();
 
     // unpack data
+    let lines = data.split_whitespace();
     let calibration_vector = lines.collect::<Vec<&str>>(); //
 
     // unpack further into a 2D vector, filter for digits with a regex
@@ -57,6 +57,7 @@ async fn main() {
         let total_int: i64 = total_number.parse().unwrap();
         cleaned_calibration_vector.push(total_int);
     }
+
     let answer: i64 = cleaned_calibration_vector.iter().sum();
     println!("{}", answer);
 }
